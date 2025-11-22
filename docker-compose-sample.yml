@@ -1,4 +1,3 @@
-version: '3.7'
 services:
     mirakurun:
         image: chinachu/mirakurun
@@ -24,23 +23,24 @@ services:
                 max-size: 10m
 
     mysql:
-        image: mariadb:10.5
-        # image: mysql:8.0 # 囲み文字を使用する場合
+        image: mysql:8.0-debian
+        ports:
+        - "3306:3306"
         volumes:
-            - mysql-db:/var/lib/mysql
+            - mysql-db-data:/var/lib/mysql
         environment:
             MYSQL_USER: epgstation
             MYSQL_PASSWORD: epgstation
             MYSQL_ROOT_PASSWORD: epgstation
             MYSQL_DATABASE: epgstation
             TZ: "Asia/Tokyo"
-        command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --performance-schema=false --expire_logs_days=1 # for mariadb
-        # command: --character-set-server=utf8mb4 --collation-server=utf8mb4_0900_as_ci --performance-schema=false --expire_logs_days=1 --default-authentication-plugin=mysql_native_password # for myql
+        command: --character-set-server=utf8mb4 --collation-server=utf8mb4_0900_as_ci --performance-schema=false --binlog_expire_logs_seconds=876400 --authentication_policy=mysql_native_password
         restart: always
         logging:
+            driver: json-file
             options:
-                max-size: "10m"
-                max-file: "3"
+                max-file: 3
+                max-size: 64m
 
     epgstation:
         build:
@@ -66,6 +66,6 @@ services:
         restart: always
 
 volumes:
-    mysql-db:
+    mysql-db-data:
         driver: local
 

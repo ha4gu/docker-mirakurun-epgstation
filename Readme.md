@@ -4,7 +4,7 @@
 
 ## 前提条件
 
-- Docker, docker-compose の導入が必須
+- Docker, docker compose の導入が必須
 - ホスト上の pcscd は停止する
 - チューナーのドライバが適切にインストールされていること
 
@@ -12,19 +12,19 @@
 
 ```sh
 curl -sf https://raw.githubusercontent.com/l3tnun/docker-mirakurun-epgstation/v2/setup.sh | sh -s
-cd docker-mirakurun-epgstation
+cd tv/
 
 #チャンネル設定
 vim mirakurun/conf/channels.yml
 
 #コメントアウトされている restart や user の設定を適宜変更する
-vim docker-compose.yml
+vim compose.yml
 ```
 
 ## 起動
 
 ```sh
-sudo docker-compose up -d
+sudo compose up -d
 ```
 
 ## チャンネルスキャン地上波のみ(取得漏れが出る場合もあるので注意)
@@ -38,18 +38,18 @@ mirakurun の EPG 更新を待ってからブラウザで http://DockerHostIP:88
 ## 停止
 
 ```sh
-sudo docker-compose down
+sudo compose down
 ```
 
 ## 更新
 
 ```sh
 # mirakurunとdbを更新
-sudo docker-compose pull
+sudo compose pull
 # epgstationを更新
-sudo docker-compose build --pull
+sudo compose build --pull
 # 最新のイメージを元に起動
-sudo docker-compose up -d
+sudo compose up -d
 ```
 
 ## 設定

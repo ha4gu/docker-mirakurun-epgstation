@@ -1,13 +1,16 @@
 FROM l3tnun/epgstation:master-debian
 
-ENV DEV="make gcc git g++ automake curl wget autoconf build-essential libass-dev libfreetype6-dev libsdl1.2-dev libtheora-dev libtool libva-dev libvdpau-dev libvorbis-dev libxcb1-dev libxcb-shm0-dev libxcb-xfixes0-dev pkg-config texinfo zlib1g-dev"
-ENV FFMPEG_VERSION=7.0
+ENV DEV="make gcc git g++ automake curl wget autoconf build-essential libass-dev libfreetype6-dev libsdl1.2-dev \
+         libtheora-dev libtool libva-dev libvdpau-dev libvorbis-dev libxcb1-dev libxcb-shm0-dev libxcb-xfixes0-dev \
+         pkg-config texinfo zlib1g-dev ca-certificates"
+ENV FFMPEG_VERSION=8.0
 
 RUN apt-get update && \
-    apt-get -y install $DEV && \
-    apt-get -y install yasm libx264-dev libmp3lame-dev libopus-dev libvpx-dev && \
+    apt-get -y --no-install-recommends install $DEV && \
+    apt-get -y install yasm nasm libx264-dev libmp3lame-dev libopus-dev libvpx-dev && \
     apt-get -y install libx265-dev libnuma-dev && \
-    apt-get -y install libasound2 libass9 libvdpau1 libva-x11-2 libva-drm2 libxcb-shm0 libxcb-xfixes0 libxcb-shape0 libvorbisenc2 libtheora0 libaribb24-dev && \
+    apt-get -y install libasound2 libass9 libvdpau1 libva-x11-2 libva-drm2 libxcb-shm0 \
+                       libxcb-xfixes0 libxcb-shape0 libvorbisenc2 libtheora0 libaribb24-dev && \
 \
 #ffmpeg build
     mkdir /tmp/ffmpeg_sources && \

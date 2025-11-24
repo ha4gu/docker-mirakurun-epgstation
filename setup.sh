@@ -2,7 +2,6 @@
 
 git clone https://github.com/ha4gu/docker-mirakurun-epgstation.git ./tv
 cd ./tv/
-cp docker-compose-sample.yml compose.yml
 cp epgstation/config/enc.js.template epgstation/config/enc.js
 cp epgstation/config/config.yml.template epgstation/config/config.yml
 cp epgstation/config/operatorLogConfig.sample.yml epgstation/config/operatorLogConfig.yml

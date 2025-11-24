@@ -16,6 +16,9 @@
 /epgstation/thumbnail/*.jpg
 /mirakurun/data/*
 /mirakurun/conf/*
+!/mirakurun/conf/channels.tokyo.yml
+!/mirakurun/conf/server.yml
+!/mirakurun/conf/tuners.sample.yml
 /recorded/*
 /tmp/
 !.gitkeep

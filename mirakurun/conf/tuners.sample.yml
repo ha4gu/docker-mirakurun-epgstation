@@ -1,0 +1,68 @@
+- name: adapter0
+  types:
+    - BS
+    - CS
+  dvbDevicePath: /dev/dvb/adapter0/dvr0
+  decoder: arib-b25-stream-test
+  command: >-
+    dvbv5-zap -a 0 -c ./config/dvbconf-for-isdb/conf/dvbv5_channels_isdbs.conf
+    -r -P <channel>
+- name: adapter1
+  types:
+    - GR
+  dvbDevicePath: /dev/dvb/adapter1/dvr0
+  decoder: arib-b25-stream-test
+  command: >-
+    dvbv5-zap -a 1 -c ./config/dvbconf-for-isdb/conf/dvbv5_channels_isdbt.conf
+    -r -P <channel>
+- name: adapter2
+  types:
+    - BS
+    - CS
+  dvbDevicePath: /dev/dvb/adapter2/dvr0
+  decoder: arib-b25-stream-test
+  command: >-
+    dvbv5-zap -a 2 -c ./config/dvbconf-for-isdb/conf/dvbv5_channels_isdbs.conf
+    -r -P <channel>
+- name: adapter3
+  types:
+    - GR
+  dvbDevicePath: /dev/dvb/adapter3/dvr0
+  decoder: arib-b25-stream-test
+  command: >-
+    dvbv5-zap -a 3 -c ./config/dvbconf-for-isdb/conf/dvbv5_channels_isdbt.conf
+    -r -P <channel>
+# - name: adapter4
+#   types:
+#     - BS
+#     - CS
+#   dvbDevicePath: /dev/dvb/adapter4/dvr0
+#   decoder: arib-b25-stream-test
+#   command: >-
+#     dvbv5-zap -a 4 -c ./config/dvbconf-for-isdb/conf/dvbv5_channels_isdbs.conf
+#     -r -P <channel>
+# - name: adapter5
+#   types:
+#     - GR
+#   dvbDevicePath: /dev/dvb/adapter5/dvr0
+#   decoder: arib-b25-stream-test
+#   command: >-
+#     dvbv5-zap -a 5 -c ./config/dvbconf-for-isdb/conf/dvbv5_channels_isdbt.conf
+#     -r -P <channel>
+# - name: adapter6
+#   types:
+#     - BS
+#     - CS
+#   dvbDevicePath: /dev/dvb/adapter6/dvr0
+#   decoder: arib-b25-stream-test
+#   command: >-
+#     dvbv5-zap -a 6 -c ./config/dvbconf-for-isdb/conf/dvbv5_channels_isdbs.conf
+#     -r -P <channel>
+# - name: adapter7
+#   types:
+#     - GR
+#   dvbDevicePath: /dev/dvb/adapter7/dvr0
+#   decoder: arib-b25-stream-test
+#   command: >-
+#     dvbv5-zap -a 7 -c ./config/dvbconf-for-isdb/conf/dvbv5_channels_isdbt.conf
+#     -r -P <channel>

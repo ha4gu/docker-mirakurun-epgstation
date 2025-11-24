@@ -1,0 +1,212 @@
+# 地上波
+
+- name: ＮＨＫ総合
+  type: GR
+  channel: '27'
+  isDisabled: false
+
+- name: ＮＨＫＥテレ
+  type: GR
+  channel: '26'
+  isDisabled: false
+
+- name: テレ玉
+  type: GR
+  channel: '32'
+  isDisabled: false
+
+- name: 日テレ
+  type: GR
+  channel: '25'
+  isDisabled: false
+
+- name: テレビ朝日
+  type: GR
+  channel: '24'
+  isDisabled: false
+
+- name: ＴＢＳ
+  type: GR
+  channel: '22'
+  isDisabled: false
+
+- name: テレビ東京
+  type: GR
+  channel: '23'
+  isDisabled: false
+
+- name: フジテレビ
+  type: GR
+  channel: '21'
+  isDisabled: false
+
+- name: ＴＯＫＹＯ　ＭＸ
+  type: GR
+  channel: '16'
+  isDisabled: false
+
+# BS
+
+- name: ＮＨＫＢＳ
+  type: BS
+  channel: BS15_0
+  serviceId: 101
+  isDisabled: false
+
+- name: ＮＨＫＢＳ
+  type: BS
+  channel: BS15_0
+  serviceId: 102
+  isDisabled: false
+
+- name: ＢＳ日テレ
+  type: BS
+  channel: BS13_0
+  serviceId: 141
+  isDisabled: false
+
+- name: ＢＳ日テレ
+  type: BS
+  channel: BS13_0
+  serviceId: 142
+  isDisabled: false
+
+- name: ＢＳ日テレ
+  type: BS
+  channel: BS13_0
+  serviceId: 143
+  isDisabled: false
+
+- name: ＢＳ朝日
+  type: BS
+  channel: BS01_0
+  serviceId: 151
+  isDisabled: false
+
+- name: ＢＳ朝日
+  type: BS
+  channel: BS01_0
+  serviceId: 152
+  isDisabled: false
+
+- name: ＢＳ朝日
+  type: BS
+  channel: BS01_0
+  serviceId: 153
+  isDisabled: false
+
+- name: ＢＳ－ＴＢＳ
+  type: BS
+  channel: BS01_1
+  serviceId: 161
+  isDisabled: false
+
+- name: ＢＳ－ＴＢＳ
+  type: BS
+  channel: BS01_1
+  serviceId: 162
+  isDisabled: false
+
+- name: ＢＳ－ＴＢＳ
+  type: BS
+  channel: BS01_1
+  serviceId: 163
+  isDisabled: false
+
+- name: ＢＳテレ東
+  type: BS
+  channel: BS01_2
+  serviceId: 171
+  isDisabled: false
+
+- name: ＢＳテレ東
+  type: BS
+  channel: BS01_2
+  serviceId: 172
+  isDisabled: false
+
+- name: ＢＳテレ東
+  type: BS
+  channel: BS01_2
+  serviceId: 173
+  isDisabled: false
+
+- name: ＢＳフジ
+  type: BS
+  channel: BS13_1
+  serviceId: 181
+  isDisabled: false
+
+- name: ＢＳフジ
+  type: BS
+  channel: BS13_1
+  serviceId: 182
+  isDisabled: false
+
+- name: ＢＳフジ
+  type: BS
+  channel: BS13_1
+  serviceId: 183
+  isDisabled: false
+
+- name: ＢＳ１０
+  type: BS
+  channel: BS15_2
+  serviceId: 200
+  isDisabled: false
+
+- name: ＢＳ１０スターチャンネル
+  type: BS
+  channel: BS15_2
+  serviceId: 201
+  isDisabled: false
+
+- name: ＢＳ１１イレブン
+  type: BS
+  channel: BS09_0
+  serviceId: 211
+  isDisabled: false
+
+- name: ＢＳ１２トゥエルビ
+  type: BS
+  channel: BS09_2
+  serviceId: 222
+  isDisabled: false
+
+- name: 放送大学テレビ
+  type: BS
+  channel: BS13_2
+  serviceId: 231
+  isDisabled: false
+
+- name: 放送大学テレビ
+  type: BS
+  channel: BS13_2
+  serviceId: 232
+  isDisabled: false
+
+- name: Ｊ：ＣＯＭＢＳ
+  type: BS
+  channel: BS23_3
+  serviceId: 260
+  isDisabled: false
+
+- name: ＢＳよしもと
+  type: BS
+  channel: BS23_1
+  serviceId: 265
+  isDisabled: false
+
+# CS
+
+- name: ショップチャンネル
+  type: CS
+  channel: CS8
+  serviceId: 55
+  isDisabled: false
+
+- name: ＱＶＣ
+  type: CS
+  channel: CS22
+  serviceId: 161
+  isDisabled: false

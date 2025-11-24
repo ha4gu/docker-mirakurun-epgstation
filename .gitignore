@@ -5,11 +5,11 @@
 .DS_Store
 /epgstation/custom.Dockerfile
 /epgstation/config/*
-!/epgstation/config/enc.js.template
-!/epgstation/config/config.yml.template
-!/epgstation/config/operatorLogConfig.sample.yml
-!/epgstation/config/epgUpdaterLogConfig.sample.yml
-!/epgstation/config/serviceLogConfig.sample.yml
+!/epgstation/config/config.sample.yml
+!/epgstation/config/enc.js
+!/epgstation/config/epgUpdaterLogConfig.yml
+!/epgstation/config/operatorLogConfig.yml
+!/epgstation/config/serviceLogConfig.yml
 /epgstation/data/*.json
 /epgstation/data/streamfiles/*.ts
 /epgstation/data/streamfiles/*.m3u8

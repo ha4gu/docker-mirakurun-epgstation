@@ -1,11 +1,5 @@
-port: 8888
+port: 80
 mirakurunPath: http://mirakurun:40772/
-
-# dbtype: sqlite
-# sqlite:
-#   extensions:
-#     - '/hoge/regexp.dylib'
-#   regexp: true
 
 dbtype: mysql
 mysql:
@@ -14,26 +8,27 @@ mysql:
     user: epgstation
     password: epgstation
     database: epgstation
+    charset: utf8mb4
 
 epgUpdateIntervalTime: 10
 
 conflictPriority: 1
 recPriority: 2
 
-recordedFormat: '%YEAR%年%MONTH%月%DAY%日%HOUR%時%MIN%分%SEC%秒-%TITLE%'
-recordedFileExtension: .m2ts
+recordedFormat: '%YEAR%%MONTH%%DAY%%TYPE%-%HOUR%%MIN%_%HALF_WIDTH_TITLE%'
+recordedFileExtension: .ts
 recorded:
     - name: recorded
       path: '%ROOT%/recorded'
 
 thumbnail: '%ROOT%/thumbnail'
 thumbnailSize: 480x270
-thumbnailPosition: 5
+thumbnailPosition: 30
 
 ffmpeg: /usr/local/bin/ffmpeg
 ffprobe: /usr/local/bin/ffprobe
 
-encodeProcessNum: 4
+encodeProcessNum: 8
 concurrentEncodeNum: 1
 encode:
     - name: H.264
